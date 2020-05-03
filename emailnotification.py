@@ -1,7 +1,9 @@
 import smtplib
 
+#This is the sender of the emails, For
 smtpUser ='tfroog@gmail.com'
 smtpPass = 'hobosafeman33'
+
 
 toAdd = 'tfroog@gmail.com'
 fromAdd = smtpUser
@@ -14,12 +16,12 @@ percentage = weight/ float (totalWeight) * 100
 
 
 subject = 'Weight Notification'
-header = 'To: ' + toAdd + '\n' + 'From: ' + fromAdd + '\n' + "Subject: " + subject
+header = 'To: ' + toAdd + '\n' + 'From: Smart Scale' + '\n' + "Subject: " + subject
 
 if (percentage== 0):
-    body = 'Object is empty. Needs to be refilled'
+    body = 'Milk is empty. Needs to be refilled'
 else:
-    body = 'Object is ' + str (percentage) + '% full'
+    body = 'Milk is ' + str (percentage) + '% full'
     
 
 print header + '\n' + body
