@@ -7,7 +7,7 @@ smtpUser ='tfroog@gmail.com'
 smtpPass = 'hobosafeman33'
 
 #this is the the email address of the user who will receive the notifications
-toAdd = 'tfroog@gmail.com'
+toAdd = 'rmjunk11@gmail.com'
 #from address, the same as the email credentials 
 fromAdd = smtpUser
 
@@ -20,7 +20,7 @@ weight = input()
 print("Enter total weight of object")
 totalWeight = input()
 #calculate the perecentage
-percentage = weight/ float (totalWeight) * 100
+percentage = float(weight) / float (totalWeight) * 100
 
 #draft of the parts of the email subject, header, and body
 subject = 'Weight Notification'
@@ -34,7 +34,7 @@ else:
     
 
 #print to log on our end
-print header + '\n' + body
+print(header + '\n' + body)
 
 #use smtp lib to connect to email server
 s = smtplib.SMTP('smtp.gmail.com', 587)
